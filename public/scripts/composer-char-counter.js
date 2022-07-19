@@ -13,6 +13,5 @@ $(document).ready(function() {
     } else {
       $(counterVal).removeClass("turnRed");
     }
-    
   });
 });
