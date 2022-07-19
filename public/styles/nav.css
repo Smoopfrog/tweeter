@@ -1,0 +1,26 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  margin: auto;
+  align-items: center;
+
+}
+
+.navBar span {
+  font-family: 'Bungee', sans-serif;
+  margin: 1.5em;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5em;
+}
+
+i {
+  color: red;
+}
