@@ -1,4 +1,7 @@
 .navBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   height: 120px;
@@ -6,7 +9,6 @@
   color: #FFFFFF;
   margin: auto;
   align-items: center;
-
 }
 
 .navBar span {
