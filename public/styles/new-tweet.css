@@ -8,6 +8,10 @@
   width: 100%;
 }
 
+textarea {
+  border: 0px;
+  background-color: #f4f1ec;
+}
 .new-tweet footer {
   font-family: 'Bungee', sans-serif;
   justify-content: space-between;
