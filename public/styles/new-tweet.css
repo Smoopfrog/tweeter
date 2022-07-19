@@ -30,3 +30,16 @@ textarea {
 .turnRed {
   color: red;
 }
+
+/* Article CSS */
+article.tweet header {
+  display: flex;
+  flex-direction: row;
+}
+article.tweet p {
+  border-bottom: 3px solid black;
+}
+article.tweet footer {
+  display: flex;
+  flex-direction: row;
+}
