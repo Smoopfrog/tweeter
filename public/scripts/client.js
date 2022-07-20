@@ -17,14 +17,14 @@ const createTweetElement = testTweet => {
   <article class="tweet">
     <header>
       <div class="iconName">
-        <img src="https://i.imgur.com/73hZDYK.png">
-      <div>Name</div>
+        <img src="${testTweet.user.avatars}">
+      <div>"${testTweet.user.name}"</div>
       </div>
-      <div id="tweeterHandle"> @tweeterhandle</div>
+      <div id="tweeterHandle">"${testTweet.user.handle}"</div>
     </header>
-    <p>Example Tweeter Text</p>
+    <p>"${testTweet.content.text}"</p>
     <footer>
-      <div>post date</div>
+      <div>"${testTweet.created_at}"</div>
       <div class="icons">
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-heart"></i>
