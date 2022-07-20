@@ -52,21 +52,44 @@ const loadTweet = () => {
 $(() => {
   loadTweet();
 
-  $('.tweet-form').on('submit', function(event) {
+  $('.tweet-form').on('submit', function(event) {    
+    const charLimit = this.counter.value
+    const values = $(this).serialize();
+    let valid = true;
+
+    console.log(charLimit)
     event.preventDefault();
 
-    // serialize values
-    let values = $(this).serialize();
+    // Check if over character limit
+    if (charLimit <= 0) {
+      valid = false;
+      alert("You are over the character limit!")
+    };
+
+    // check if textbox is empty
+    if (charLimit == 140) {
+      valid = false;
+      alert("Tweet empty!")
+    }
+
+    // check values for null
+    if (values === null) {
+      valid = false;
+      alert("You are over the character limit")
+    };
 
     // posts values to /tweets
-    $.ajax({
-      method: 'POST',
-      url:'/tweets',
-      data: values,
-      success: () => {
-        loadTweet();
-      }
-    })
+    if (valid) {
+      $.ajax({
+        method: 'POST',
+        url:'/tweets',
+        data: values,
+        success: () => {
+          loadTweet();
+        }
+      })
+    }
+
   });
 
   // Box shadow on tweet
