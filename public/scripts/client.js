@@ -1,5 +1,7 @@
 const createTweetElement = testTweet => {
+  // set date and timeago variables
   const date = new Date(testTweet.created_at);
+  const tweetAge = timeago.format(date);
 
   // create the tweetTemplate
   const tweetTemplate = `
@@ -7,13 +9,13 @@ const createTweetElement = testTweet => {
     <header>
       <div class="iconName">
         <img src="${testTweet.user.avatars}">
-      <div>"${testTweet.user.name}"</div>
+      <div>${testTweet.user.name}</div>
       </div>
-      <div id="tweeterHandle">"${testTweet.user.handle}"</div>
+      <div id="tweeterHandle">${testTweet.user.handle}</div>
     </header>
-    <p>"${testTweet.content.text}"</p>
+    <p>${testTweet.content.text}</p>
     <footer>
-      <div>"${date}"</div>
+      <div>${tweetAge}</div>
       <div class="icons">
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-heart"></i>
