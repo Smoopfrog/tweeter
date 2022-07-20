@@ -26,6 +26,7 @@ const testTweets = [
 const createTweetElement = testTweet => {
   const date = new Date(testTweet.created_at);
 
+  // create the tweetTemplate
   const tweetTemplate = `
   <article class="tweet">
     <header>
@@ -47,6 +48,7 @@ const createTweetElement = testTweet => {
   </article>
   `;
 
+  //Append tweetTemplate
   $("#tweetFeed").append(tweetTemplate);
   };
 
@@ -56,13 +58,21 @@ const renderTweets = tweets => {
   // calls createTweetElement for each tweet
     createTweetElement(tweet);  
   });
-  
-  // takes return value and appends it to the tweets container
 }
 
 $(() => {
-  
+
+  $('.tweet-form').on('submit', (evt) => {
+     evt.preventDefault();
+  });
+
+  // $("#submit").on('submit', event => {
+  //   alert( "Handler for .submit() called." );
+  //   event.preventDefault();
+  // });
+
   renderTweets(testTweets);
+
   // Box shadow on tweet
   $(".tweet").on('mouseover', function() {
     $(".tweet").addClass("shadowBox");
