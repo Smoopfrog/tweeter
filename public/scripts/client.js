@@ -1,4 +1,4 @@
-const testTweets = [
+const data = [
   {
     "user": {
       "name": "Newton",
@@ -62,16 +62,22 @@ const renderTweets = tweets => {
 
 $(() => {
 
-  $('.tweet-form').on('submit', (evt) => {
-     evt.preventDefault();
+  $('.tweet-form').on('submit', function(event) {
+    event.preventDefault();
+
+    // get values
+    let values = $(this).serialize();
+
+    // posts values to /tweets
+    $.ajax({
+      method: 'POST',
+      url:'/tweets',
+      data: values
+    })
+ 
   });
 
-  // $("#submit").on('submit', event => {
-  //   alert( "Handler for .submit() called." );
-  //   event.preventDefault();
-  // });
-
-  renderTweets(testTweets);
+  renderTweets(data);
 
   // Box shadow on tweet
   $(".tweet").on('mouseover', function() {
