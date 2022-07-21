@@ -61,19 +61,24 @@ const loadTweet = () => {
 $(() => {
   loadTweet();
   
+  // Toggle new tweet div 
   $('.tweetToggle').on('click', () => {
     if ($('.new-tweet').css('display') == 'none') {
       $('.new-tweet').slideDown('slow');
+      $("#tweet-text").focus();
       return;
     }
     $('.new-tweet').slideUp('slow');
       return;
   })
 
+  // submit a new tweet
   $('.tweet-form').on('submit', function(event) {
     const charLimit = this.counter.value;
     const values = $(this).serialize();
-    let valid = true;
+
+    // clear error msg
+    $(".error").empty();
 
     event.preventDefault();
 
@@ -90,7 +95,7 @@ $(() => {
       
       // Clear error in 3 seconds
       setTimeout(() => {
-        $(".error").empty();
+        $('.error').slideUp('slow')
       }, 3000);
 
       return
@@ -109,7 +114,7 @@ $(() => {
 
       // Clear error in 3 seconds
       setTimeout(() => {
-        $(".error").empty();
+        $('.error').slideUp('slow')
       }, 3000);
 
       return
@@ -128,11 +133,12 @@ $(() => {
 
       // Clear error in 3 seconds
       setTimeout(() => {
-        $(".error").empty();
+        $('.error').slideUp('slow')
       }, 3000);
 
       return
     }
+    
 
 
     // posts values to /tweets
