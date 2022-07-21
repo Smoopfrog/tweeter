@@ -1,11 +1,19 @@
 @media only screen and (min-width: 1024px) {
-  body {
-    display: flex;
-    flex-direction: row;
-  }
-  
   .navBar {
     background-color: #4056A1;
     color: white;
+  }
+
+  .profile {
+    top: 20%;
+    left: 0%;
+    width: 45%;
+    position: fixed;
+  }
+
+  .container {
+    float: right;
+    width: 50% ;
+    margin: 3%;
   }
 }

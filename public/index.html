@@ -42,29 +42,32 @@
       </div>
 
     </nav>
-    <header class="profile">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Your Name</h2>
-      </div>
-  </header>
-    <main class="container">
-      <section class="new-tweet">
-        <div class="error"></div>
-        <form class="tweet-form" method="POST" action="/tweets/" >
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <footer>
-            <button type="submit" id="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </footer>
-        </form>
-      </section>
-      <section id="tweetFeed">
-      </section>
-      <i id="scrollUp" class="fa-solid fa-circle-arrow-up"></i>
-    </main>
+    <div>
+      <header class="profile">
+        <div>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div>
+            <h2>Your Name</h2>
+        </div>
+    </header>
+      <main class="container">
+        <section class="new-tweet">
+          <div class="error"></div>
+          <form class="tweet-form" method="POST" action="/tweets/" >
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <footer>
+              <button type="submit" id="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </footer>
+          </form>
+        </section>
+        <section id="tweetFeed">
+        </section>
+        <i id="scrollUp" class="fa-solid fa-circle-arrow-up"></i>
+      </main>
+    </div>
+
   </body>
 </html>
