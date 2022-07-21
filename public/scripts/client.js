@@ -60,6 +60,15 @@ const loadTweet = () => {
 
 $(() => {
   loadTweet();
+  
+  $('.tweetToggle').on('click', () => {
+    if ($('.new-tweet').css('display') == 'none') {
+      $('.new-tweet').slideDown('slow');
+      return;
+    }
+    $('.new-tweet').slideUp('slow');
+      return;
+  })
 
   $('.tweet-form').on('submit', function(event) {
     const charLimit = this.counter.value;
@@ -111,8 +120,8 @@ $(() => {
       $(".error").empty();
       const errorMsg = $('<div>').text(" Null value ");
       //adds icon to errorMsg
-      $errorMsg.prepend('<i class="fa-solid fa-circle-exclamation"></i>');
-      $errorMsg.append('<i class="fa-solid fa-circle-exclamation"></i>');
+      errorMsg.prepend('<i class="fa-solid fa-circle-exclamation"></i>');
+      errorMsg.append('<i class="fa-solid fa-circle-exclamation"></i>');
 
       // Append and slidedown errorMsg
       $('.error').append(errorMsg).slideDown('slow');

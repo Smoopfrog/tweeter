@@ -1,6 +1,7 @@
 .new-tweet {
-  display: flex;
+  display: none;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 #tweet-text {
@@ -29,4 +30,10 @@ textarea {
 
 .turnRed {
   color: red;
+}
+
+.error {
+  color: red;
+  margin-bottom: 20px;
+  display: none;
 }

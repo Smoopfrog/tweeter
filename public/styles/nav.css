@@ -16,7 +16,7 @@
   margin: 1.5em;
 }
 
-.rightSide {
+.tweetToggle {
   display: flex;
   flex-direction: column;
   align-items: center;
