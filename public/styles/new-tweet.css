@@ -38,7 +38,8 @@ textarea {
   display: none;
 }
 
-.fa-circle-arrow-up {
+#scrollUp {
+  display: none;
   bottom: 10px;
   right: 10px;
   font-size: 50px;
