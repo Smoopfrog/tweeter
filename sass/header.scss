@@ -1,11 +1,13 @@
+@use 'layout';
+
 .profile {
-  height: 400;
+  height: 400px;
   width: 100%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   
-  background-color: #ffff99;
+  background-color: layout.$profile-yellow;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }

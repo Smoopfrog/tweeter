@@ -1,6 +1,5 @@
 @use 'layout';
 
-
 .new-tweet {
   margin-top: 20px;
 
@@ -16,8 +15,6 @@
     background-color: layout.$tweeter-blue;
     color: white;
   }
-  
-  
 }
 
 textarea {
@@ -25,14 +22,14 @@ textarea {
 
   border: 0px;
   border-bottom: 3px solid black;
-  background-color: #f4f1ec;
+  background-color: layout.$background-grey;
 }
 
 .counter {
   float: right;
 }
 
-.turnRed {
+.turn-red {
   color: red;
 }
 

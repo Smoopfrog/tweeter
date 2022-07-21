@@ -28,7 +28,7 @@ main {
 }
 
 @media only screen and (min-width: 1024px) {
-  .navBar {
+  .nav-bar {
     background-color: #4056A1;
     color: white;
   }
@@ -42,5 +42,8 @@ main {
     float: right;
     width: 50%;
     margin: 3%;
+  }
+  .tweet-toggle:hover {
+    color: #ffff99;
   }
 }

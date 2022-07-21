@@ -1,4 +1,5 @@
-/* Article CSS */
+@use 'layout';
+
 .tweet {
   margin: 20px 0;
   border: 3px solid black;
@@ -11,7 +12,7 @@
     flex-direction: row;
     justify-content: space-between;
   
-    background-color: #f4f1ec;
+    background-color: layout.$background-grey;
   }
 
   p {
@@ -32,19 +33,19 @@
   }
 }
 
-.iconName {
+.icon-name {
   display: flex;
   flex-direction: row;
   align-items: center;
   
-  .iconName img {
+  .icon-name img {
     max-width: 40%;
     height: auto;
     margin-right: 0.2em;
   }
 }
 
-#tweeterHandle {
+#tweeter-handle {
   color: rgb(155, 153, 153);
   float: right;
 }

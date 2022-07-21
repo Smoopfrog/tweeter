@@ -1,7 +1,7 @@
 @use 'layout';
 
 @media only screen and (min-width: 1024px) {
-  .navBar {
+  .nav-bar {
     background-color: layout.$tweeter-blue;
     color: white;
   }
@@ -17,5 +17,9 @@
     float: right;
     width: 50% ;
     margin: 3%;
+  }
+
+  .tweet-toggle:hover {
+    color: layout.$profile-yellow;
   }
 }

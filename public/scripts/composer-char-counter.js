@@ -9,22 +9,9 @@ $(document).ready(function() {
 
     // Add class to turn red if count is below 0
     if (charsLeft < 0) {
-      $(counterVal).addClass("turnRed");
+      $(counterVal).addClass("turn-red");
     } else {
-      $(counterVal).removeClass("turnRed");
+      $(counterVal).removeClass("turn-red");
     }
   });
-
-  $(window).scroll(() => {
-    if (window.scrollY !== 0) {
-      $('#scrollUp').show();
-      return;
-    }
-    $('#scrollUp').hide();
-    return;
-  })
-
-  $('#scrollUp').click(() => {
-    scrollTo(0, 0);
-  })
 });

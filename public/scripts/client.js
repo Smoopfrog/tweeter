@@ -14,11 +14,11 @@ const createTweetElement = tweet => {
   const tweetTemplate = `
   <article class="tweet">
     <header>
-      <div class="iconName">
+      <div class="icon-name">
         <img src="${tweet.user.avatars}">
       <div>${tweet.user.name}</div>
       </div>
-      <div id="tweeterHandle">${tweet.user.handle}</div>
+      <div id="tweeter-handle">${tweet.user.handle}</div>
     </header>
     <p>
     ${content}
@@ -61,8 +61,22 @@ const loadTweet = () => {
 $(() => {
   loadTweet();
   
-  // Toggle new tweet div 
-  $('.tweetToggle').on('click', () => {
+  // function for scroll-up button
+  $(window).scroll(() => {
+    if (window.scrollY !== 0) {
+      $('#scroll-up').show();
+      return;
+    }
+    $('#scroll-up').hide();
+    return;
+  })
+
+  $('#scroll-up').click(() => {
+    scrollTo(0, 0);
+  })
+
+  // Toggle new tweet box 
+  $('.tweet-toggle').on('click', () => {
     if ($('.new-tweet').css('display') == 'none') {
       $('.new-tweet').slideDown('slow');
       $("#tweet-text").focus();
@@ -80,6 +94,7 @@ $(() => {
     // clear error msg
     $(".error").empty();
 
+    // prevent refresh
     event.preventDefault();
 
     // check if textbox is empty
@@ -139,8 +154,6 @@ $(() => {
       return
     }
     
-
-
     // posts values to /tweets
     $.ajax({
       method: 'POST',

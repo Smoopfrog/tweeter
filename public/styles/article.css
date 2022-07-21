@@ -1,4 +1,32 @@
-/* Article CSS */
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+  flex-direction: column;
+}
+
 .tweet {
   margin: 20px 0;
   border: 3px solid black;
@@ -25,18 +53,18 @@
   font-size: 0.75em;
 }
 
-.iconName {
+.icon-name {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.iconName .iconName img {
+.icon-name .icon-name img {
   max-width: 40%;
   height: auto;
   margin-right: 0.2em;
 }
 
-#tweeterHandle {
+#tweeter-handle {
   color: rgb(155, 153, 153);
   float: right;
 }
