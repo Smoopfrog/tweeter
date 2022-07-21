@@ -27,15 +27,15 @@ const createTweetElement = testTweet => {
 
   //Append tweetTemplate
   $("#tweetFeed").append(tweetTemplate);
-  };
+};
 
 const renderTweets = tweets => {
   // loops through tweets
-  tweets.forEach(tweet => {  
+  tweets.forEach(tweet => {
   // calls createTweetElement for each tweet
-    createTweetElement(tweet);  
+    createTweetElement(tweet);
   });
-}
+};
 
 const loadTweet = () => {
   $('#tweetFeed').empty();
@@ -52,31 +52,30 @@ const loadTweet = () => {
 $(() => {
   loadTweet();
 
-  $('.tweet-form').on('submit', function(event) {    
-    const charLimit = this.counter.value
+  $('.tweet-form').on('submit', function(event) {
+    const charLimit = this.counter.value;
     const values = $(this).serialize();
     let valid = true;
 
-    console.log(charLimit)
     event.preventDefault();
 
     // Check if over character limit
     if (charLimit <= 0) {
       valid = false;
-      alert("You are over the character limit!")
-    };
+      alert("You are over the character limit!");
+    }
 
     // check if textbox is empty
     if (charLimit == 140) {
       valid = false;
-      alert("Tweet empty!")
+      alert("Tweet empty!");
     }
 
     // check values for null
     if (values === null) {
       valid = false;
-      alert("You are over the character limit")
-    };
+      alert("You are over the character limit");
+    }
 
     // posts values to /tweets
     if (valid) {
@@ -87,29 +86,8 @@ $(() => {
         success: () => {
           loadTweet();
         }
-      })
+      });
     }
-
   });
-
-  // Box shadow on tweet
-  $(".tweet").on('mouseover', function() {
-    $(".tweet").addClass("shadowBox");
-  });
-
-  $(".tweet").on('mouseout', function() {
-    $(".tweet").removeClass("shadowBox");
-  });
-
-  // Icon color change 
-  $(".tweet i").on('mouseover', function(event) {
-    event.target.style.color = "orange";
-  });
-  
-  $(".tweet i").on('mouseout', function(event) {
-    event.target.style.color = "";
-  });
-
-  
 });
 

@@ -45,7 +45,10 @@ article.tweet footer {
   flex-direction: row;
   margin-top: 5px;
 }
-
-.shadowBox {
+article.tweet:hover {
   box-shadow: 10px 10px grey;
+}
+
+.tweet i:hover {
+  color: orange;
 }
