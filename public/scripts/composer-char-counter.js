@@ -14,4 +14,17 @@ $(document).ready(function() {
       $(counterVal).removeClass("turnRed");
     }
   });
+
+  $(window).scroll(() => {
+    if (window.scrollY !== 0) {
+      $('#scrollUp').show();
+      return;
+    }
+    $('#scrollUp').hide();
+    return;
+  })
+
+  $('#scrollUp').click(() => {
+    scrollTo(0, 0);
+  })
 });
