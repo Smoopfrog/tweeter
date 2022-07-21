@@ -47,7 +47,6 @@ const renderTweets = tweets => {
   // loops through tweets
   tweets.forEach(tweet => {
   // calls createTweetElement for each tweet
-    console.log(tweet);
     createTweetElement(tweet);
   });
 };
@@ -167,6 +166,7 @@ $(() => {
       data: values,
       success: () => {
         loadTweet();
+        $('#tweet-text').val('');
       }
     });
   });
