@@ -68,35 +68,72 @@ $(() => {
 
     event.preventDefault();
 
-    // Check if over character limit
-    if (charLimit <= 0) {
-      valid = false;
-      alert("You are over the character limit!");
-    }
-
     // check if textbox is empty
     if (charLimit == 140) {
-      valid = false;
-      alert("Tweet empty!");
+      $(".error").empty();
+      const errorMsg = $('<div>').text(" Your tweet is empty! ");
+      //adds icon to errorMsg
+      errorMsg.prepend('<i class="fa-solid fa-circle-exclamation"></i>');
+      errorMsg.append('<i class="fa-solid fa-circle-exclamation"></i>');
+
+      // Append and slidedown errorMsg
+      $('.error').append(errorMsg).slideDown('slow');
+      
+      // Clear error in 3 seconds
+      setTimeout(() => {
+        $(".error").empty();
+      }, 3000);
+
+      return
+    }
+
+    // Check if over character limit
+    if (charLimit <= 0) {
+      $(".error").empty();
+      const errorMsg = $('<div>').text(" Your tweet is too long! ");
+      //adds icon to errorMsg
+      errorMsg.prepend('<i class="fa-solid fa-circle-exclamation"></i>');
+      errorMsg.append('<i class="fa-solid fa-circle-exclamation"></i>');
+
+      // Append and slidedown errorMsg
+      $('.error').append(errorMsg).slideDown('slow');
+
+      // Clear error in 3 seconds
+      setTimeout(() => {
+        $(".error").empty();
+      }, 3000);
+
+      return
     }
 
     // check values for null
     if (values === null) {
-      valid = false;
-      alert("You are over the character limit");
+      $(".error").empty();
+      const errorMsg = $('<div>').text(" Null value ");
+      //adds icon to errorMsg
+      $errorMsg.prepend('<i class="fa-solid fa-circle-exclamation"></i>');
+      $errorMsg.append('<i class="fa-solid fa-circle-exclamation"></i>');
+
+      // Append and slidedown errorMsg
+      $('.error').append(errorMsg).slideDown('slow');
+
+      // Clear error in 3 seconds
+      setTimeout(() => {
+        $(".error").empty();
+      }, 3000);
+
+      return
     }
+
 
     // posts values to /tweets
-    if (valid) {
-      $.ajax({
-        method: 'POST',
-        url:'/tweets',
-        data: values,
-        success: () => {
-          loadTweet();
-        }
-      });
-    }
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: values,
+      success: () => {
+        loadTweet();
+      }
+    });
   });
 });
-
