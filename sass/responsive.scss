@@ -1,6 +1,8 @@
+@use 'layout';
+
 @media only screen and (min-width: 1024px) {
   .navBar {
-    background-color: #4056A1;
+    background-color: layout.$tweeter-blue;
     color: white;
   }
 
