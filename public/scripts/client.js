@@ -1,19 +1,28 @@
-const createTweetElement = testTweet => {
+const safety = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+const createTweetElement = tweet => {
   // set date and timeago variables
-  const date = new Date(testTweet.created_at);
+  const date = new Date(tweet.created_at);
   const tweetAge = timeago.format(date);
+  const content = `${safety(tweet.content.text)}`
 
   // create the tweetTemplate
   const tweetTemplate = `
   <article class="tweet">
     <header>
       <div class="iconName">
-        <img src="${testTweet.user.avatars}">
-      <div>${testTweet.user.name}</div>
+        <img src="${tweet.user.avatars}">
+      <div>${tweet.user.name}</div>
       </div>
-      <div id="tweeterHandle">${testTweet.user.handle}</div>
+      <div id="tweeterHandle">${tweet.user.handle}</div>
     </header>
-    <p>${testTweet.content.text}</p>
+    <p>
+    ${content}
+    </p>
     <footer>
       <div>${tweetAge}</div>
       <div class="icons">
