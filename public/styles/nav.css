@@ -1,18 +1,25 @@
 .navBar {
   top: 0;
+  height: 120px;
   width: 100%;
+  margin: auto;
+
+
   display: flex;
   justify-content: space-between;
-  height: 120px;
-  background-color: #4056A1;
-  color: #FFFFFF;
-  margin: auto;
   align-items: center;
+
+  background-color: #ffff99;
+  color: black;
 }
 
 .navBar span {
   font-family: 'Bungee', sans-serif;
   margin: 1.5em;
+}
+
+.navBar i {
+  color: red;
 }
 
 .tweetToggle {
@@ -21,8 +28,4 @@
   align-items: center;
   margin: 1.5em;
   cursor: pointer;
-}
-
-.navBar i {
-  color: red;
 }
