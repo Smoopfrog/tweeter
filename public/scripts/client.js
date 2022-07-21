@@ -39,9 +39,15 @@ const createTweetElement = tweet => {
 };
 
 const renderTweets = tweets => {
+  // sorts tweets from newest to oldest
+  tweets.sort((a, b) => {
+    return b.created_at - a.created_at;
+  })
+
   // loops through tweets
   tweets.forEach(tweet => {
   // calls createTweetElement for each tweet
+    console.log(tweet);
     createTweetElement(tweet);
   });
 };
