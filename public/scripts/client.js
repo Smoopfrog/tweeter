@@ -8,7 +8,7 @@ const createTweetElement = tweet => {
   // set date and timeago variables
   const date = new Date(tweet.created_at);
   const tweetAge = timeago.format(date);
-  const content = `${safety(tweet.content.text)}`
+  const content = `${safety(tweet.content.text)}`;
 
   // create the tweetTemplate
   const tweetTemplate = `
@@ -35,7 +35,7 @@ const createTweetElement = tweet => {
   `;
 
   //Append tweetTemplate
-  $("#tweetFeed").append(tweetTemplate);
+  $("#tweet-feed").append(tweetTemplate);
 };
 
 const renderTweets = tweets => {
@@ -53,7 +53,7 @@ const renderTweets = tweets => {
 };
 
 const loadTweet = () => {
-  $('#tweetFeed').empty();
+  $('#tweet-feed').empty();
 
   $.ajax({
     method: 'GET',
@@ -79,9 +79,9 @@ $(() => {
 
   $('#scroll-up').click(() => {
     scrollTo(0, 0);
-  })
+  });
 
-  // Toggle new tweet box 
+  // Toggle new tweet box
   $('.tweet-toggle').on('click', () => {
     if ($('.new-tweet').css('display') == 'none') {
       $('.new-tweet').slideDown('slow');
@@ -89,8 +89,8 @@ $(() => {
       return;
     }
     $('.new-tweet').slideUp('slow');
-      return;
-  })
+    return;
+  });
 
   // submit a new tweet
   $('.tweet-form').on('submit', function(event) {
@@ -116,10 +116,10 @@ $(() => {
       
       // Clear error in 3 seconds
       setTimeout(() => {
-        $('.error').slideUp('slow')
+        $('.error').slideUp('slow');
       }, 3000);
 
-      return
+      return;
     }
 
     // Check if over character limit
@@ -135,10 +135,10 @@ $(() => {
 
       // Clear error in 3 seconds
       setTimeout(() => {
-        $('.error').slideUp('slow')
+        $('.error').slideUp('slow');
       }, 3000);
 
-      return
+      return;
     }
 
     // check values for null
@@ -154,10 +154,10 @@ $(() => {
 
       // Clear error in 3 seconds
       setTimeout(() => {
-        $('.error').slideUp('slow')
+        $('.error').slideUp('slow');
       }, 3000);
 
-      return
+      return;
     }
     
     // posts values to /tweets
