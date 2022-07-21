@@ -3,10 +3,14 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
+//sass
+$title-font: 'Bungee', sans-serif;
+$text-font: 'Source Sans Pro', sans-serif; 
+
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,11 +18,12 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $text-font; 
 }
 
 main {
@@ -26,3 +31,4 @@ main {
   margin: auto;
   flex-direction: column;
 }
+

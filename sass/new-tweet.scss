@@ -1,19 +1,25 @@
 .new-tweet {
   margin-top: 20px;
+
   display: none;
   flex-direction: column;
-}
-.new-tweet footer {
-  font-family: "Bungee", sans-serif;
-  justify-content: space-between;
-}
-.new-tweet button {
-  background-color: #4056A1;
-  color: white;
+
+  footer {
+    font-family: 'Bungee', sans-serif;
+    justify-content: space-between;
+  }
+
+  button {
+    background-color: #4056A1;
+    color: white;
+  }
+  
+  
 }
 
 textarea {
   width: 100%;
+
   border: 0px;
   border-bottom: 3px solid black;
   background-color: #f4f1ec;
@@ -32,3 +38,4 @@ textarea {
   display: none;
   color: red;
 }
+

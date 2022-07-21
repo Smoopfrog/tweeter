@@ -1,0 +1,58 @@
+/* Article CSS */
+.tweet {
+  margin: 20px 0;
+  border: 3px solid black;
+  padding: 0.5em;
+  
+  header {
+    margin-top: 10px;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+    background-color: #f4f1ec;
+  }
+
+  p {
+    border-bottom: 3px solid black;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+  }
+
+  footer {
+    margin-top: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    font-size: 0.75em;
+  }
+}
+
+.iconName {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  .iconName img {
+    max-width: 40%;
+    height: auto;
+    margin-right: 0.2em;
+  }
+}
+
+#tweeterHandle {
+  color: rgb(155, 153, 153);
+  float: right;
+}
+
+.tweet:hover {
+  box-shadow: 10px 10px grey;
+}
+
+.tweet i:hover {
+  color: orange;
+}

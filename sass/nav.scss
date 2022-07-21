@@ -3,23 +3,29 @@
   height: 120px;
   width: 100%;
   margin: auto;
+
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   background-color: #ffff99;
   color: black;
-}
-.navBar span {
-  font-family: "Bungee", sans-serif;
-  margin: 1.5em;
+  span {
+    font-family: 'Bungee', sans-serif;
+    margin: 1.5em;
+  }
 }
 
 .tweetToggle {
   margin: 1.5em;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
   cursor: pointer;
+  
 }
 
 .tweetToggle:hover {
