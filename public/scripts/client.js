@@ -167,6 +167,8 @@ $(() => {
       success: () => {
         loadTweet();
         $('#tweet-text').val('');
+        $('.counter').val(140);
+
       }
     });
   });
