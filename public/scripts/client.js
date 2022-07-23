@@ -122,7 +122,7 @@ $(() => {
     }
 
     // Check if over character limit
-    if (charLimit <= 0) {
+    if (charLimit < 0) {
       $(".error").empty();
       const errorMsg = $('<div>').text(" Your tweet is too long! ");
       //adds icon to errorMsg
